@@ -25,12 +25,12 @@ def main():
     three_dimensional_array = [[[random.randint(1, 100) for _ in range(n)] for _ in range(n)] for _ in range(n)]
 
     start_time = time.perf_counter()
-    print(f"Original value at [0][0][0]: {three_dimensional_array[0][0][0]}")
-    perform_cubic_operation(three_dimensional_array)
-    print(f"New value at [0][0][0]: {three_dimensional_array[0][0][0]}")
-    end_time = time.perf_counter()
 
+    perform_cubic_operation(three_dimensional_array)
+
+    end_time = time.perf_counter()
     duration = end_time - start_time
+
     print(f"Execution time: {duration:.4f} seconds.")
 
 if __name__ == "__main__":
