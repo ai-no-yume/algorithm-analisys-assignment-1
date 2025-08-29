@@ -33,9 +33,9 @@ public class Exercise {
         }
 
         long startTime = System.nanoTime();
-        System.out.println(threeDimensionalArray[0][0][0]);
+
         cubicOperation(threeDimensionalArray);
-        System.out.println(threeDimensionalArray[0][0][0]);
+
         long endTime = System.nanoTime();
 
         double runtimeNS = endTime - startTime;
