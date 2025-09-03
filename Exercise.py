@@ -3,21 +3,16 @@ import time
 """
 Calcula el número de Fibonacci en la posición n
 
-o La implementación Big(O) asociada es: O(n) porque este ciclo se repite n veces
-    lo que significa que crece de manera proporcional al tamaño de la entrada.
+o La notación Big(o) asociada es:O(2^n) porque cada llamada a fibonacci(n) genera dos nuevas llamadas recursivas:
+    fibonacci(n-1) y fibonacci(n-2). De forma que crece de manera exponencial.
 
-o  Operación dominante: la suma 'a + b'.
-    Esa suma se repite dentro del bucle tantas veces como el valor de n.
+o La operación dominante es la llamada recursiva: fibonacci(n-1) + fibonacci(n-2)
+    porque es la que más veces se repite y provoca un gran aumento en el número de operaciones.   
 """
 
 def fibonacci(n):
-    a, b = 0, 1
-
-    # El bucle se repite n veces
-    # Cada vuelta realiza la suma "a + b" (operación dominante)
-    for _ in range(n):
-        a, b = b, a + b
-    return a
+    if n <=1: return n # Comparación y retorna constante O(1).
+    return fibonacci(n - 1) + fibonacci(n - 2) # Operación dominante O(2^n).
 
 # Entrada por teclado
 n = int(input("Ingresa un valor para n: "))
