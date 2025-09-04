@@ -2,13 +2,14 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Exercise {
-    public static void cubicOperation(int[][][] threeDimensionalArray) {
-        int n = threeDimensionalArray.length;
+    // O(n^3)
+    public static void cubicOperation(int[][][] threeDimensionalArray) { // O(1)
+        int n = threeDimensionalArray.length; // O(1)
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                for (int k = 0; k < n; k++) {
-                    threeDimensionalArray[i][j][k]++;
+        for (int i = 0; i < n; i++) { // O(n)
+            for (int j = 0; j < n; j++) { // O(n)
+                for (int k = 0; k < n; k++) { // O(n)
+                    threeDimensionalArray[i][j][k]++; // O(1)
                 }
             }
         }
