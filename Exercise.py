@@ -2,13 +2,13 @@ from typing import List
 import random
 import time
 
-def perform_cubic_operation(three_dimensional_array: List[List[List[int]]]):
-    n = len(three_dimensional_array)
+def perform_cubic_operation(three_dimensional_array: List[List[List[int]]]): # O(1)
+    n = len(three_dimensional_array) # O(1)
 
-    for i in range(n):
-        for j in range(n):
-            for k in range(n):
-                three_dimensional_array[i][j][k] += 1
+    for i in range(n): # O(n)
+        for j in range(n): # O(n)
+            for k in range(n): # O(n)
+                three_dimensional_array[i][j][k] += 1 # O(1)
 
 def read_input():
     while True:
